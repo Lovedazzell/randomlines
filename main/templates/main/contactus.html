@@ -1,0 +1,40 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}
+  Login
+{% endblock title %}
+{% block container %}
+ <div class="container main_div">
+   <div class="comment">
+    <form action="" method="POST" novalidate>
+      <div class="row">
+        {% csrf_token %}
+        <div class="col-12 my-2">
+          
+          <input type="text" class="   form-control text-info" name="name" placeholder="Name" aria-label="First name">
+        </div>
+        <div class="col-12 my-2">
+          
+          <input type="email" class=" form-control text-info" name="email" placeholder="Email" aria-label="First name">
+        </div>
+        <div class="col-12 my-2">
+          
+          <input type="number" class=" form-control text-info" name="number" placeholder="Number" aria-label="First name">
+        </div>
+       
+       <div class="col-12 form-floating">
+            <textarea class="form-control" placeholder="Leave a comment here" name="msg" id="floatingTextarea2" style="height: 100px"></textarea>
+            
+          </div>
+          <div class="col-4 my-2 ">
+            <input class="btn  btn-outline-warning" type="submit" value="Send mail ">
+           </div>
+      </div>
+    </form>
+    
+   
+    <div class="container my-4  w-100"><p class="text-secondary">We will connect you as soon as possible</a></p></div>
+   </div>
+ </div>
+{% endblock container %}

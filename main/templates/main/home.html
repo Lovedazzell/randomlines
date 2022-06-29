@@ -1,0 +1,63 @@
+{% extends "main/base.html" %}
+{% load static %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'main/css/home.css' %}">
+{% endblock css %}
+{% block title %}
+      Dashboard
+{% endblock title %}
+{% block container %}
+<div class="container text-justify my-5">
+      <h3 class="text-center font">Welcome {% if request.user.is_authenticated %} {{fname}} {{lname}} {% endif %}</h3>
+      <div style=" font-style: italic;" class="text-center lead  text-muted text-justify">“Any fool can write code that a computer can understand.programmers write code that humans can understand.” – Martin Fowler</div>
+</div>
+
+<div class="card bg-dark text-white my-5">
+  <img src="{% static 'main/images/blog_back.jpg' %}" style="opacity: .5;" class="card-img" alt="back_image">
+  <div class=" d-flex align-items-center card-img-overlay">
+  <div class="container-fluid">
+    <div class="d-flex my-3 justify-content-center w-100"><h5 class=" d-inline font  card-title">VISIT MY YOUTUBE CHANNEL</h5></div>
+    <div class="d-flex justify-content-center" ><a href="#"><button class="btn btn-danger">SUBSCRIBE</button></a></div>
+   <div class="d-flex my-2  justify-content-center"><p class="d-inline card-text">Random lines</p></div>
+  </div>
+  </div>  
+  </div>
+</div>
+<div class="container">
+      <div class="row">
+            <div class="col-lg-4 col-md-6 my-2 d-flex justify-content-center "><div class="card  glow " style="width: 18rem;">
+              <img src="{% static 'main/images/hacking1.jpg' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">PROGRAMMING</h5>
+                        <p class="card-text">Programming languages are one kind of computer language and are used to communicate with computer.Here you will learn these languages in very simple way.</p>
+                        <p class="card-text"><small ><a class="text-muted" href="#">Click here to visit</a></small></p>
+              </div>
+            </div></div>
+            <div class="col-lg-4 col-md-6 my-3  d-flex justify-content-center"><div class=" glow  card" style="width: 18rem;">
+              <img src="{% static 'main/images/hacking.jpg' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">ETHICAL HACKING</h5>
+                        <p class="card-text">Here you will learn about real hacking and how it works.You can also checkout some of my simple hacking vedio on my youtube channel.</p>
+                        <p class="card-text"><small ><a class="text-muted" href="#">Click here to visit</a></small></p>
+              </div>
+            </div></div>
+            <div class="col-lg-4 col-md-6 my-3 d-flex justify-content-center"><div class=" glow  card" style="width: 18rem;">
+              <img src="{% static 'main/images/blog.jpg' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">MY BLOG</h5>
+                <p class="card-text">Some of the latest information about coding and tech world, and best article that you need to read to keep your knowledge update time to time.</p>
+                <p class="card-text"><small ><a class="text-muted" href="#">Click here to visit</a></small></p>
+              </div>
+            </div></div>
+            <div class="col-lg-4 my-4 col-md-6 d-flex justify-content-center"><div class=" glow  card" style="width: 18rem;">
+              <img src="{% static 'main/images/howto.jpg' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">HOW-TO-DO</h5>
+                        <p class="card-text">Some things that you need to know while codding to avoide errors, and  increase your work efficency, make your program easy to write. </p>
+                        <p class="card-text"><small ><a class="text-muted" href="#">Click here to visit</a></small></p>
+              </div>
+            </div></div>
+      </div>
+</div>
+
+{% endblock container %}

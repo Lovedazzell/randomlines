@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.purple {
+  background-color: rgb(26, 80, 116);
+}
+
+.white {
+  background-color: white;
+}
+.font {
+  font-family: "Merienda", cursive;
+}
+.hover:hover {
+  background-color: rgb(26, 80, 116);
+  color: white;
+}
+
+/* Card Animation  */
+.glow {
+  transition: transform 0.3s ease;
+}
+.glow:hover {
+  transform: scale(1.1);
+}
+
+/* Login screen  */
+.form{
+  width: 450px;
+  height: auto;
+  padding: 10px 50px 10px 50px;
+}
+ .main_div{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 50px;
+  
+ }
+ .link{
+
+  text-decoration: none;
+color: black;
+opacity: .7;
+ }
+
+ .link:hover{
+color: burlywood;
+ }
+
+ .comment{
+width: 550px;
+ }
+

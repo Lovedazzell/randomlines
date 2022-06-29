@@ -1,0 +1,48 @@
+{% load static %}
+<nav class="logo_display navbar navbar-light purple">
+  <div class="container-fluid">
+    <a class="navbar-brand font text-light"> 
+      <img id="logo_first"  style=" width: 180px; height: auto "
+        src="{% static 'main/images/logo.png' %}"
+        alt="Random lines"
+    /></a>
+    <form class=" d-flex">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search"
+        aria-label="Search"
+      />
+      <button class="btn btn-outline-info white" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<ul class="nav justify-content-center bg-info">
+  <li class="nav-item">
+    <a class="nav-link hover text-primary" aria-current="page" href="#">Blog</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link hover text-primary" href="{% url 'video' %}">Video</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link hover text-primary" href="{% url 'contact' %}"
+      >Contact Us</a
+    >
+  </li>
+  {% if not request.user.is_authenticated %} 
+  <li class="nav-item">
+    <a class="nav-link hover text-primary" href="{% url 'login' %}">Login</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link hover text-primary" href="{% url 'singup' %}">SingUp</a>
+  </li>
+  {% endif %}
+  {% if request.user.is_authenticated %} 
+  <li class="nav-item">
+    <a class="nav-link hover text-primary" href="{% url 'pwdchange' %}">Change password</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link hover text-primary" href="{% url 'logout' %}">Logout</a>
+  </li>
+  {% endif %}
+</ul>

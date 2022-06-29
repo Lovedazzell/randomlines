@@ -1,0 +1,46 @@
+{% extends "main/base.html" %}
+{% load static %}
+
+{% block title %}
+  Singup
+{% endblock title %}
+{% block container %}
+ <div class="container main_div">
+   <div class="form  ">
+    <form action="">
+      <div class="row">
+        <div class="col-12 my-2">
+          
+          <input type="text" class=" form-control text-info" placeholder="First name" aria-label="First name">
+        </div>
+        <div class="col-12 my-2">
+          <input type="text" class="form-control text-info" placeholder="Last name" aria-label="Last name">
+        </div>
+       <div class="col-12 " >
+        <input type="text" class="form-control text-info" placeholder="User name" aria-label="User name">
+       </div>
+       <div class="col-12  my-2" >
+        <input type="password" class="form-control text-info" placeholder="Password" aria-label="Password">
+       </div>
+       <div class="col-12 " >
+        <input type="password" class="form-control text-info" placeholder="Confirm Password" aria-label="User name">
+       </div>
+       <div class="col-12 my-2" >
+        <input type="email" class="form-control text-info" placeholder="Email" aria-label="Email">
+       </div>
+       <div class="col-3  ">
+
+        <input class="btn  btn-outline-success" type="submit" value="Submit ">
+       </div>
+      
+      </div>
+    </form>
+    <div class="row">
+        <div class="col-10 my-2"><input  class="btn btn-primary w-100" type="button" value="Continue with Facebook"></div>
+        <div class="col-1  my-2"><i class="fab text-info fa-facebook fa-2x"></i></div>
+        <div class="col-10"><input class="btn btn-danger w-100" type="button" value="Contunue with Gmail"></div>
+        <div class="col-1"><i class="fas text-danger fa-envelope fa-2x"></i></div>
+      </div>
+   </div>
+ </div>
+{% endblock container %}
